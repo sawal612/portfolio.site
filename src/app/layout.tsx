@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata: Metadata = {
-  title: "[YOUR NAME] | Full-Stack Developer",
-  description: "Portfolio of [YOUR NAME], Web Developer specializing in MERN and Next.js.",
+  title: "Sawal Pushkarna | Full-Stack Developer",
+  description: "Portfolio of Sawal Pushkarna, Web Developer specializing in MERN and Next.js.",
 };
 
 export default function RootLayout({
