@@ -4,13 +4,14 @@ import React from "react";
 import { Marquee } from "@/components/animations/Marquee";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { portfolioData } from "@/data/content";
+import { IconType } from "react-icons";
 import { 
   SiNextdotjs, SiReact, SiHtml5, SiCss, SiTailwindcss, 
   SiGreensock, SiFramer, SiNodedotjs, SiExpress, 
   SiJavascript, SiCplusplus, SiGit, SiGithub 
 } from "react-icons/si";
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, IconType> = {
   "Next.js": SiNextdotjs,
   "React.js": SiReact,
   "HTML5": SiHtml5,
