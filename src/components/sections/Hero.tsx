@@ -53,38 +53,38 @@ export default function Hero() {
   return (
     <section 
       ref={containerRef} 
-      className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden pt-20"
+      className="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden pt-32 pb-24"
     >
       <HeroScene />
       
-      <div className="relative z-20 flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 max-w-6xl mx-auto gap-12">
+      <div className="relative z-20 flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 max-w-6xl mx-auto gap-8 md:gap-12">
         
         <div className="flex flex-col items-center md:items-start flex-1">
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tighter leading-[0.9] mb-6 perspective-1000">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tighter leading-[0.9] mb-6 perspective-1000">
             <SplitText 
               text="Sawal Pushkarna" 
               charClassName="hero-title-char origin-bottom" 
             />
           </h1>
           
-          <div className="hero-subtitle text-xl md:text-3xl text-neutral-400 font-light mb-12 h-10">
+          <div className="hero-subtitle text-lg sm:text-xl md:text-3xl text-neutral-400 font-light mb-10 h-14 md:h-10">
             I build things for the web. <br className="md:hidden"/>
             <span className="text-accent md:ml-2">
               <TextScramble phrases={["Full-Stack Developer", "MERN Specialist", "Hackathon Winner", "Next.js Builder"]} />
             </span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6">
-            <MagneticButton className="hero-cta bg-accent text-white px-8 py-4 rounded-full font-sans font-medium text-lg transition-transform hover:scale-105 shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]">
-              <a href="#projects">View Work</a>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+            <MagneticButton className="hero-cta bg-accent text-white px-8 py-4 rounded-full font-sans font-medium text-lg transition-transform hover:scale-105 shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.6)] w-full sm:w-auto">
+              <a href="#projects" className="w-full h-full flex items-center justify-center">View Work</a>
             </MagneticButton>
-            <MagneticButton className="hero-cta bg-transparent border border-neutral-600 text-white px-8 py-4 rounded-full font-sans font-medium text-lg transition-colors hover:bg-neutral-800">
-              <a href="#contact">Contact Me</a>
+            <MagneticButton className="hero-cta bg-transparent border border-neutral-600 text-white px-8 py-4 rounded-full font-sans font-medium text-lg transition-colors hover:bg-neutral-800 w-full sm:w-auto">
+              <a href="#contact" className="w-full h-full flex items-center justify-center">Contact Me</a>
             </MagneticButton>
           </div>
         </div>
 
-        <div className="hero-image relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-neutral-800 shadow-[0_0_50px_rgba(139,92,246,0.2)] shrink-0 mt-12 md:mt-0">
+        <div className="hero-image relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-neutral-800 shadow-[0_0_50px_rgba(139,92,246,0.2)] shrink-0 mt-8 md:mt-0">
           <img 
             src="/hero-2.jpeg" 
             alt="Sawal Pushkarna" 
