@@ -8,6 +8,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 export default function Projects() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const cardsContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -18,8 +19,8 @@ export default function Projects() {
       cards.forEach((card, i) => {
         ScrollTrigger.create({
           trigger: card,
-          start: "top top+=100",
-          endTrigger: containerRef.current,
+          start: "top top",
+          endTrigger: cardsContainerRef.current,
           end: "bottom bottom",
           pin: true,
           pinSpacing: false,
@@ -53,13 +54,13 @@ export default function Projects() {
         </h2>
       </div>
 
-      <div className="relative w-full pb-48">
+      <div className="relative w-full" ref={cardsContainerRef}>
         {portfolioData.projects.map((project, index) => (
           <div 
             key={project.id} 
-            className="project-card sticky top-[80px] lg:top-[100px] w-full max-w-6xl mx-auto px-4 sm:px-8 h-[calc(100vh-120px)] lg:h-[70vh] lg:min-h-[600px] flex flex-col justify-center origin-top mb-16 lg:mb-32"
+            className="project-card sticky top-0 w-full h-[100svh] flex flex-col items-center justify-center origin-top overflow-hidden"
           >
-            <div className="w-full h-full bg-neutral-900 border border-neutral-800 rounded-3xl lg:rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl relative">
+            <div className="w-full max-w-6xl mx-auto px-4 sm:px-8 h-[calc(100svh-120px)] lg:h-[75vh] lg:min-h-[500px] lg:max-h-[700px] bg-neutral-900 border border-neutral-800 rounded-3xl lg:rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl relative">
               
               {/* Content Box */}
               <div className="w-full lg:w-1/2 p-6 sm:p-10 md:p-16 flex flex-col justify-between z-10 bg-neutral-900/90 backdrop-blur-sm order-2 lg:order-1 h-[55%] lg:h-full overflow-y-auto">

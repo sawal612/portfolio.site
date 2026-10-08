@@ -34,10 +34,10 @@ export default function About() {
       // Stats counters
       if (statsRef.current) {
         const counters = statsRef.current.querySelectorAll(".stat-num");
-        
+
         counters.forEach((counter) => {
           const target = parseFloat(counter.getAttribute("data-target") || "0");
-          gsap.fromTo(counter, 
+          gsap.fromTo(counter,
             { innerHTML: "0" },
             {
               innerHTML: target,
@@ -79,7 +79,7 @@ export default function About() {
   return (
     <section ref={containerRef} id="about" className="relative w-full min-h-screen py-24 px-4 sm:px-8 max-w-7xl mx-auto flex flex-col justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
+
         {/* Left Side: Text and Stats */}
         <div className="flex flex-col gap-12">
           <div>
@@ -123,10 +123,10 @@ export default function About() {
         {/* Right Side: Image */}
         <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:ml-auto overflow-hidden rounded-3xl" ref={imageRef}>
           <div className="absolute inset-0 bg-accent/20 mix-blend-overlay z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Profile Avatar" 
-            className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+          <img
+            src="./abou-port.jpeg"
+            alt="Profile Avatar"
+            className="object-cover w-full h-full transition-transform duration-700 hover:scale-105"
           />
         </div>
 

@@ -71,12 +71,7 @@ export const portfolioData = {
     {
       title: "Attendance Management Site",
       description: "A robust portal for tracking student attendance, generating reports, and managing class schedules.",
-      tech: ["React", "Express", "MySQL"]
-    },
-    {
-      title: "Portfolio v1",
-      description: "My previous personal website built with vanilla HTML, CSS, and JS.",
-      tech: ["HTML", "CSS", "JS"]
+      tech: ["Next.js", "Supabase", "Tailwind CSS"]
     }
   ]
 };
